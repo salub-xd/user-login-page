@@ -1,0 +1,97 @@
+.registerForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 80vh; */
+}
+
+.registerForm .form button {
+  margin: 15px 0;
+}
+
+.registerForm .form {
+  width: 700px;
+  /* height: 320px; */
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 0 40px -10px #000;
+  margin: calc(250px - 200px) auto;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  position: relative;
+}
+
+.registerForm .form h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 160px;
+  color: #78788c;
+  border-bottom: 3px solid #78788c;
+}
+
+/* .form .registerNames {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+} */
+
+.registerForm .form input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  font-family: "Montserrat", sans-serif;
+  transition: all 0.3s;
+  border-bottom: 2px solid #bebed2;
+}
+
+.registerForm .form input:focus {
+  border-bottom: 2px solid #78788c;
+}
+
+.registerForm .form input.redAlert {
+  border-bottom: 2px solid #ff0000;
+
+}
+.registerForm .form  input:focus.redAlert {
+  border-bottom: 2px solid #ce7287;
+}
+
+
+.form p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+
+.registerForm button.submitBtn {
+  float: right;
+  padding: 8px 12px;
+  margin: 15px 0 0;
+  font-family: "Montserrat", sans-serif;
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all 0.3s;
+  padding: 6px 20px;
+  font-size: 20px;
+  border-radius: 5px;
+}
+
+.registerForm button.submitBtn:hover {
+  background: #78788c;
+  color: #fff;
+}
+.registerForm .deleteBtn:hover {
+  /* background: #ff0808; */
+  /* border-radius: 5px; */
+  opacity: 0.7;
+}
