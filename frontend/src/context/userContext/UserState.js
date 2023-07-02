@@ -3,7 +3,7 @@ import UserContext from './UserContext';
 const UserState = ({children}) => {
 
     let host = 'http://localhost:5000/api';
-    const [myUser, setMyUser] = useState();
+    const [myUser, setMyUser] = useState({});
 
     const register = async (firstname, lastname, username, email, password) => {
         console.log("User Register");
@@ -33,6 +33,7 @@ const UserState = ({children}) => {
                 body: JSON.stringify({ email, password })
             });
             const resData = await res.json();
+            // console.log(resData)
             setMyUser(resData);
             // console.log(myUser.error);
         } catch (err) {
