@@ -4,7 +4,7 @@ import './login.css'
 const Login = () => {
     // const {login} = context;
     const context = useContext(userContext);
-    const {myUser,login} = context;
+    const {myUser,login,error} = context;
     const [myValue, setMyValue] = useState({ email: "", password: "" });
     const onChange = (event) => {
         // console.log(event.target.value);
@@ -13,8 +13,6 @@ const Login = () => {
     const submitClick = (e) => {
         e.preventDefault();
         login(myValue.email,myValue.password);
-        console.log(myValue);
-        console.log("Response",myUser);
         setMyValue({ email: "", password: "" });
     }
     // const getData = ()=>{
@@ -30,6 +28,7 @@ const Login = () => {
                     <h2>Login Here</h2>
                     <p type="Email"><input type='text' id="email" name="email" placeholder="Write Your Email.." value={myValue.email} onChange={onChange} ></input></p>
                     <p type="Password"><input type='password' id="password" name="password" placeholder="Write Your Password.." value={myValue.password} onChange={onChange}></input></p>
+                    {error && <><p>{error}</p></>}
                     <button onClick={submitClick} type="submit" id="submit" className="submitBtn">Submit</button>
                 </form>
             </div>
